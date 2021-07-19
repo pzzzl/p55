@@ -1,4 +1,4 @@
 from distutils.core import setup
 import py2exe
 
-setup(console=['extract.py'])
+setup(console=['py-extract.py'])
