@@ -1,6 +1,6 @@
 # PY-EXTRACT ⛏
 
-<img src="https://img.shields.io/badge/version-1.1-red"> <img src="https://img.shields.io/badge/language-Python-brightgreen"> <img src="https://img.shields.io/badge/feature-File%20extraction-orange"> <img src="https://img.shields.io/badge/tools-utilities-blue">
+<img src="https://img.shields.io/badge/version-1.2-red"> <img src="https://img.shields.io/badge/Python->=3.9.6-brightgreen"> <img src="https://img.shields.io/badge/feature-File%20extraction-orange"> <img src="https://img.shields.io/badge/tools-utilities-blue">
 
 <b><i>PY-EXTRACT</i></b> is a script to extract ALL files from a directory tree into a single folder "extracted".
 
