@@ -1,19 +1,15 @@
 import os
+import tkinter as tk
+from tkinter import messagebox
 
-def confirm_processing(path):
-    print('\nAre you sure you want to extract all files from the folder "' + path + '" into a single folder "extracted"?')
-    
-    print("0. No")
-    print("1. Yes")
-
-    answer = input("Option: ")
-    
-    while(answer != "1" and answer != "0"):
-        print("The given option " + answer + " is invalid")
-        answer = input("Option: ")
-
-    if(answer == "0"):
-        exit()
+class Message_Error:
+    def __init__(self, error_title, error_message):
+        self.error_title = error_title
+        self.error_message = error_message
+        self.root = tk.Tk()
+        self.root.withdraw()
+        self.msgbox = tk.messagebox.showerror(title=self.error_title, message=self.error_message)
+        self.root.destroy()
 
 def check_structure(path):
     extracted = path + '/extracted'
@@ -22,5 +18,6 @@ def check_structure(path):
         try:
             os.mkdir(extracted)
         except:
-            print("Could not create folder " + extracted)
+            msg = "Could not create folder " + extracted
+            Message_Error("Error", msg)
             exit()
