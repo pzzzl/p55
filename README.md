@@ -1,10 +1,10 @@
-# P55 ⛏
+<h1 align="center">P55 ⛏</h1>
 
-<img src="https://img.shields.io/badge/version-1.2-red"> <img src="https://img.shields.io/badge/Python->=3.9.6-brightgreen"> <img src="https://img.shields.io/badge/feature-File%20organization-orange"> <img src="https://img.shields.io/badge/tools-utilities-blue">
+<p align="center">
+    <img src="https://img.shields.io/badge/version-1.3-brightgreen"> <img src="https://img.shields.io/badge/feature-File%20organization-orange"> <img src="https://img.shields.io/badge/tools-utilities-blue">
+</p>
 
-<b><i>P55</i></b> is a bundle that centers all files from a directory tree into a single folder and/or organize them by extension.
-
-```python p55.py```
+<p align="center"><b><i>P55</i></b> is a bundle that centers all files from a directory tree into a single folder and/or organize them by extension.</p>
 
 ## Features ✔
 
