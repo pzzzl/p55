@@ -1,1 +1,2 @@
 Installer
+Build into a single file
