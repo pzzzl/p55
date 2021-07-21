@@ -1,4 +1,4 @@
 from distutils.core import setup
 import py2exe
 
-setup(console=['py-extract.py'])
+setup(console=['p55.py'])
