@@ -1,6 +1,6 @@
 # P55 ⛏
 
-<img src="https://img.shields.io/badge/version-1.2-red"> <img src="https://img.shields.io/badge/Python->=3.9.6-brightgreen"> <img src="https://img.shields.io/badge/feature-File%20extraction-orange"> <img src="https://img.shields.io/badge/tools-utilities-blue">
+<img src="https://img.shields.io/badge/version-1.2-red"> <img src="https://img.shields.io/badge/Python->=3.9.6-brightgreen"> <img src="https://img.shields.io/badge/feature-File%20organization-orange"> <img src="https://img.shields.io/badge/tools-utilities-blue">
 
 <b><i>P55</i></b> is a bundle to center all files from a directory tree into a single folder and/or organize them by extension. The organization feature will be available soon! Meanwhile take a look at <a href="https://github.com/pzzzl/py-organizer">py-organizer</a>.
 
