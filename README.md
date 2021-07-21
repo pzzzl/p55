@@ -56,8 +56,9 @@ The better way to do this is by using <b><i>P55</i></b>, making that task <i>eas
 
 <details><summary><b>Installation</b></summary>
 
-  1. `git clone https://github.com/pzzzl/p55`
-  2. Go to the `dist` folder and run `p55.exe`
+   1. Download the installer <a href="https://github.com/pzzzl/p55/raw/master/installer.exe">here</a> 
+   2. Run the installer and follow the steps until it's finished
+   3. Run `P55.exe`
 </details>
 
 <details><summary><b>Advice</b></summary>
