@@ -51,8 +51,8 @@ The better way to do this is by using <b><i>P55</i></b>, making that task <i>eas
 
 <details><summary><b>Installation</b></summary>
 
-  1. Download the file `extract.py` from this repository. You could also clone it using `git clone https://github.com/pzzzl/p55` if you have <a href="https://git-scm.com/">Git</a> installed.
-  2. You'll need <a href="https://www.python.org/">Python</a> installed to run the script. The latest version was developed and tested in `Python 3.9.6`. After Python is installed you can check it's version with `python -V` on your console.
+  1. `git clone https://github.com/pzzzl/p55`
+  2. Go to the `dist` folder and run `p55.exe`
 </details>
 
 <details><summary><b>Advice</b></summary>
