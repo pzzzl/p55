@@ -1,12 +1,12 @@
 import tkinter as tk
-from src.extract_module import extract
+from src.config.config import *
 from src.tk_utils import Application
-
-APPLICATION_NAME = "P55"
+from src.extract_module import extract
 
 if(__name__ == '__main__'):
     root = tk.Tk()
-    root.geometry("200x150")
-    root.title(APPLICATION_NAME)
+    root.title(APP_NAME)
+    root.geometry(APP_GEOMETRY)
+    
     app = Application(root, extract)
     app.mainloop()
