@@ -49,4 +49,4 @@ def run(path):
     print("\nTHE SCRIPT FOUND " + str(DUPLICATED_FILES) + " DUPLICATED FILES!")
     print("EXTRACTED FILES: " + str(EXTRACTED_FILES))
     print("FINISHED SUCCESFULLY!")
-    input("\nPress ENTER to exit...")
+    input("\nPress ENTER to continue...")

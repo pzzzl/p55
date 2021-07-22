@@ -1,2 +1,0 @@
-Installer - https://python101.pythonlibrary.org/chapter44_creating_an_installer.html
-Build into a single file

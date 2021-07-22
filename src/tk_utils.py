@@ -5,7 +5,7 @@ class Application(tk.Frame):
     def __init__(self, master, extract_function):
         super().__init__(master)
         self.master = master
-        self.master.configure(background="#a8dadc")
+        self.master.configure(background="orange")
         self.frame = Frame(self.master)
         self.frame.place(relx=.5, rely=.5, anchor=tk.CENTER)
         self.extract_function = extract_function
@@ -55,32 +55,38 @@ class Application(tk.Frame):
             pass
         self.master.deiconify()
 
-def get_path():
-    root = tk.Tk()
-    root.withdraw()
-    path = filedialog.askdirectory()
-    root.destroy()
-    if(path != ""):
-        return path
-    else:
-        exit()
+class Utils:
+    def __init__(self):
+        self.master = tk.Tk()
+        self.master.withdraw()
 
-# AUX FUNCTIONS
-def start():
-    root = tk.Tk()
-    root.withdraw()
-    start_info = tk.messagebox.askokcancel(title="Choose folder", message='Choose the directory tree which will have all files extracted to a single folder "extracted".')
-    if not start_info:
-        root.destroy()
-    root.destroy()
+    def start(self):
+        self.start_info = tk.messagebox.askokcancel(title="Choose folder", message='Choose the directory tree which will have all files extracted to a single folder "extracted".')
+        if not self.start_info:
+            self.master.destroy()
+        self.master.destroy()
     
+    def get_path(self):
+        self.path = filedialog.askdirectory()
+        self.master.destroy()
+        if(self.path != ""):
+            return self.path
+        else:
+            exit()
 
-def are_you_sure(path):
-    root = tk.Tk()
-    root.withdraw()
-    question = tk.messagebox.askyesno(title="Confirm", message='Are you sure you want to extract all files from the folder "' + path + '" into a single folder "extracted"?')
-    if question:
-        root.destroy()
-    else:
-        root.destroy()
-        exit()
+    def are_you_sure(self, path):
+        self.question = tk.messagebox.askyesno(title="Confirm", message='Are you sure you want to extract all files from the folder "' + path + '" into a single folder "extracted"?')
+        if self.question:
+            self.master.destroy()
+        else:
+            self.master.destroy()
+            exit()
+
+class Message_Error:
+    def __init__(self, error_title, error_message):
+        self.error_title = error_title
+        self.error_message = error_message
+        self.master = tk.Tk()
+        self.master.withdraw()
+        self.msgbox = tk.messagebox.showerror(title=self.error_title, message=self.error_message)
+        self.master.destroy()

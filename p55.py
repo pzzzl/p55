@@ -6,7 +6,7 @@ APPLICATION_NAME = "P55"
 
 if(__name__ == '__main__'):
     root = tk.Tk()
-    root.geometry("400x400")
+    root.geometry("200x150")
     root.title(APPLICATION_NAME)
     app = Application(root, extract)
     app.mainloop()
