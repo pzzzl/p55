@@ -11,6 +11,8 @@
 - [Features](#features)
 - [Installation](#installation)
 - [How it works?](#how-it-works)
+    1. [Extract](#extract)
+    2. [Organize](#organize)
 - [Advice](#advice)
 
 ## Features
@@ -25,6 +27,9 @@
    3. Run `P55.exe`
 
 ## How it works?
+
+### Extract
+
 Imagine you have the following folder structure:
 
 ```
@@ -65,6 +70,10 @@ C:\USERS\YOUR_NAME\DESKTOP\EXTRACTABLE_FOLDER
 ```
 
 The better way to do this is by using <b><i>P55</i></b>, making that task <i>easy as 1-2-3</i>.
+
+### Organize
+
+🚧 DOCUMENTATION IN PROGRESS 🚧 
 
 ## Advice 
   The best way to work with files is <b>ALWAYS</b> by making them safe first. To guarantee data loss prevention, make sure you have a backup before running the script. The code is projected to not allow those things to happen, but you'll never know. Enjoy! 😀
