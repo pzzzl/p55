@@ -9,7 +9,7 @@
 ## Features ✔
 
 - [x] Extract all files from a directory tree into a single folder;
-- [ ] Organize files by extension - soon! Meanwhile take a look at <a href="https://github.com/pzzzl/py-organizer">py-organizer</a> as a preview.
+- [x] Organize files by extension.
 
 <details><summary><b>How it works?</b></summary>
 Imagine you have the following folder structure:
