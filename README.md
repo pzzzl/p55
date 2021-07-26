@@ -13,10 +13,10 @@
 - [How it works?](#how-it-works)
 - [Advice](#advice)
 
-## Features ✔
+## Features
 
-- [x] Extract all files from a directory tree into a single folder;
-- [x] Organize files by extension.
+- [x] Extract all files from a directory tree into a single folder
+- [x] Organize files by extension
 
 ## Installation 
 
