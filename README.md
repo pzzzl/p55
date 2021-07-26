@@ -1,7 +1,7 @@
 <h1 align="center">P55 ⛏</h1>
 
 <p align="center">
-    <img src="https://img.shields.io/badge/version-1.3-brightgreen"> <img src="https://img.shields.io/badge/feature-File%20organization-orange"> <img src="https://img.shields.io/badge/tools-utilities-blue">
+    <img src="https://img.shields.io/badge/version-2.0.0-brightgreen"> <img src="https://img.shields.io/badge/feature-File%20organization-orange"> <img src="https://img.shields.io/badge/tools-utilities-blue">
 </p>
 
 <p align="center"><b><i>P55</i></b> is a bundle made to center all files from a directory tree into a single folder and also organize them by extension.</p>
@@ -56,7 +56,7 @@ The better way to do this is by using <b><i>P55</i></b>, making that task <i>eas
 
 <details><summary><b>Installation</b></summary>
 
-   1. Download the installer <a href="https://github.com/pzzzl/p55/raw/master/installer.exe">here</a> 
+   1. Download the installer <a href="https://github.com/pzzzl/p55/raw/master/installer.zip">here</a> 
    2. Run the installer and follow the steps until it's finished
    3. Run `P55.exe`
 </details>
