@@ -11,8 +11,8 @@
 - [Funcionalidades](#funcionalidades)
 - [Instalação](#instalação)
 - [Como funciona?](#como-funciona)
-    1. [Extração](#extracao)
-    2. [Organização](#organizacao)
+    1. [Extração](#extração)
+    2. [Organização](#organização)
 - [Aviso](#aviso)
 
 ## Funcionalidades
