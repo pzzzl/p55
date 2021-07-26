@@ -6,12 +6,25 @@
 
 <p align="center"><b><i>P55</i></b> is a bundle made to center all files from a directory tree into a single folder and also organize them by extension.</p>
 
+## Summary
+
+- [Features](#features)
+- [Installation](#installation)
+- [How it works?](#how-it-works)
+- [Advice](#advice)
+
 ## Features ✔
 
 - [x] Extract all files from a directory tree into a single folder;
 - [x] Organize files by extension.
 
-<details><summary><b>How it works?</b></summary>
+## Installation 
+
+   1. Download the installer <a href="https://github.com/pzzzl/p55/raw/master/installer.zip">here</a> 
+   2. Run the installer and follow the steps until it's finished
+   3. Run `P55.exe`
+
+## How it works?
 Imagine you have the following folder structure:
 
 ```
@@ -52,15 +65,6 @@ C:\USERS\YOUR_NAME\DESKTOP\EXTRACTABLE_FOLDER
 ```
 
 The better way to do this is by using <b><i>P55</i></b>, making that task <i>easy as 1-2-3</i>.
-</details>
 
-<details><summary><b>Installation</b></summary>
-
-   1. Download the installer <a href="https://github.com/pzzzl/p55/raw/master/installer.zip">here</a> 
-   2. Run the installer and follow the steps until it's finished
-   3. Run `P55.exe`
-</details>
-
-<details><summary><b>Advice</b></summary>
+## Advice 
   The best way to work with files is <b>ALWAYS</b> by making them safe first. To guarantee data loss prevention, make sure you have a backup before running the script. The code is projected to not allow those things to happen, but you'll never know. Enjoy! 😀
-</details>
