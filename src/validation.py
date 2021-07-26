@@ -1,12 +1,12 @@
 import os
 from src.tk_utils import Message_Error
 
-def check_structure(path):
-    extracted = path + '/extracted'
-    if(not os.path.isdir(extracted)):
+def check_structure(path, desired_name):
+    folder = path + '/' + desired_name
+    if(not os.path.isdir(folder)):
         try:
-            os.mkdir(extracted)
+            os.mkdir(folder)
         except:
-            msg = "Could not create folder " + extracted
+            msg = "Could not create folder " + folder
             Message_Error(error_title="Error", error_message=msg)
             exit()

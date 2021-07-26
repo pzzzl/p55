@@ -2,13 +2,14 @@ from tkinter import Frame, filedialog
 import tkinter as tk
 
 class Application(tk.Frame):
-    def __init__(self, master, extract_function):
+    def __init__(self, master, extract_function, organizer_function):
         super().__init__(master)
         self.master = master
         self.master.configure(background="orange")
         self.frame = Frame(self.master)
         self.frame.place(relx=.5, rely=.5, anchor=tk.CENTER)
         self.extract_function = extract_function
+        self.organizer_function = organizer_function
         self.pack()
         self.initial_setup()
         self.center()
@@ -24,7 +25,8 @@ class Application(tk.Frame):
         self.organize_button.config(width=10, height=2)
         self.organize_button.place(anchor=tk.CENTER)
         self.organize_button["text"] = "Organize"
-        self.organize_button["state"] = "disabled"
+        self.organize_button["command"] = self.organizer
+        # self.organize_button["state"] = "disabled"
         self.organize_button.pack()
     
     def dispatch(self):
@@ -55,13 +57,22 @@ class Application(tk.Frame):
             pass
         self.master.deiconify()
 
+    def organizer(self):
+        self.master.withdraw()
+        try:
+            self.organizer_function()
+        except:
+            pass
+        self.master.deiconify()
+
 class Utils:
     def __init__(self):
         self.master = tk.Tk()
         self.master.withdraw()
 
-    def start(self):
-        self.start_info = tk.messagebox.askokcancel(title="Choose folder", message='Choose the directory tree which will have all files extracted to a single folder "extracted".')
+    def start(self, msg):
+        self.msg = msg
+        self.start_info = tk.messagebox.askokcancel(title="Choose folder", message=self.msg)
         if not self.start_info:
             self.master.destroy()
         self.master.destroy()
@@ -74,8 +85,9 @@ class Utils:
         else:
             exit()
 
-    def are_you_sure(self, path):
-        self.question = tk.messagebox.askyesno(title="Confirm", message='Are you sure you want to extract all files from the folder "' + path + '" into a single folder "extracted"?')
+    def are_you_sure(self, msg):
+        self.msg = msg
+        self.question = tk.messagebox.askyesno(title="Confirm", message=self.msg)
         if self.question:
             self.master.destroy()
         else:
