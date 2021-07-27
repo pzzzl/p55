@@ -57,8 +57,8 @@ class Application(tk.Frame):
         try:
             logger.info("Calling the extract module")
             self.extract_function()
-        except:
-            logger.info("Module 'extract' closed unexpectedly")
+        except Exception as e:
+            logger.info("Module 'extract' closed unexpectedly. Error: " + str(e))
             pass
         self.master.deiconify()
 
@@ -67,8 +67,8 @@ class Application(tk.Frame):
         try:
             logger.info("Calling the organizer module")
             self.organizer_function()
-        except:
-            logger.info("Module 'organizer' closed unexpectedly")
+        except Exception as e:
+            logger.info("Module 'organizer' closed unexpectedly. Error: " + str(e))
             pass
         self.master.deiconify()
 

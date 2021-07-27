@@ -3,51 +3,36 @@ from shutil import move
 from src.log import logger
 
 def run(path):
-    dir = path
-    folder = dir + '/organized'
-
-    # ASSIGN ARRAY OF FILES IN THE CURRENT DIRECTORY
-    files = os.listdir(dir)
-
-    # WHAT REMAINS AFTER PROCESSING
+    organized_path = path + '/organized'
+    files = os.listdir(path)
+    logger.info("Files: " + str(files))
     files.remove('organized')
 
-    # MOVES FILES TO ORGANIZED FOLDER
-    for f in files:
-        file = dir + '/' + f
-        destination = folder + '/' + f
+    for file in files:
+        file_path = path + '/' + file
+        destination = organized_path + '/' + file
         try:
-            os.replace(file, destination)
+            os.replace(file_path, destination)
         except PermissionError:
-            logger.info('\nFailed to move file "%s": being used by another process.\n' % f)
+            logger.info('\nFailed to move file "%s": being used by another process.\n' % file)
 
-    # FOCUS ON NEW FOLDER
-    os.chdir(folder)
+    os.chdir(organized_path)
+    organized_files = os.listdir()
 
-    # ASSIGN ARRAY OF FILES IN THE DESIGNATED DIRECTORY
-    organized = os.listdir()
+    for file in organized_files:
+        file_path = organized_path + '/' + file
+        file_path, file_extension = os.path.splitext(file_path)
 
-    #GENERATE FOLDER STRUCTURE
-    for f in organized:
-        # VARIABLE
-        file = folder + '/' + f
-
-        # EXTRACTS EXTENSION FROM FILE
-        file, file_extension = os.path.splitext(file)
-
-        # GENERATE FOLDER FOT CERTAIN EXTENSION IF FILE ISN'T A FOLDER
         try:
             if file_extension != '':
                 os.mkdir(file_extension)
         except FileExistsError:
-            os.chdir(folder)
+            os.chdir(organized_path)
 
-        # MATCHES DESTINATION WITH DATA TYPE
-        destination = folder + '/' + file_extension + '/'
+        destination = organized_path + '/' + file_extension + '/'
 
-        # FINALLY MOVES FILE TO IT'S DESTINATION
         try:
-            move(folder + '/' + f, destination)
+            logger.info("Moving " + file + " to " + destination)
+            move(organized_path + '/' + file, destination)
         except:
-            logger.info('"%s" already exists.' % f)
-        logger.info(file_extension)
+            logger.info('"%s" already exists.' % file)
