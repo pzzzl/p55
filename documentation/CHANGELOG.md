@@ -1,5 +1,9 @@
 # Versions
 
+## 2.1.1 (under development)
+
+- Licensed under MIT license
+
 ## 2.1.0
 
 - Hiding console window while processing
@@ -18,4 +22,3 @@ Developers:
 - TDD
 - Sample structure creation (also for testing)
 - Organizer module refactoring
-- Add MIT license
