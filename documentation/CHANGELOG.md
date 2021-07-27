@@ -24,3 +24,4 @@ Developers:
 - Organizer module refactoring
 - Turn everything into classes
 - Translate remaining HTML into Markdown (more of a documentation thing)
+- Multi-thread
