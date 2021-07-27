@@ -1,7 +1,7 @@
 <h1 align="center">P55 ⛏</h1>
 
 <p align="center">
-    <img src="https://img.shields.io/badge/version-2.0.0-brightgreen"> <img src="https://img.shields.io/badge/feature-File%20organization-orange"> <img src="https://img.shields.io/badge/tools-utilities-blue">
+    <img src="https://img.shields.io/badge/version-2.1.0-brightgreen"> <img src="https://img.shields.io/badge/feature-File%20organization-orange"> <img src="https://img.shields.io/badge/tools-utilities-blue">
 </p>
 
 <p align="center"> <a href="https://github.com/pzzzl/p55/blob/master/documentation/pt-BR.md">Documentação em Português (BR)</a> </p>
@@ -10,17 +10,20 @@
 
 ## Summary
 
+- [Summary](#summary)
 - [Features](#features)
 - [Installation](#installation)
 - [How it works?](#how-it-works)
-    1. [Extract](#extract)
-    2. [Organize](#organize)
+  - [Extract](#extract)
+  - [Organize](#organize)
 - [Advice](#advice)
 
 ## Features
 
 - [x] Extract all files from a directory tree into a single folder
 - [x] Organize files by extension
+
+Take a look at the [CHANGELOG](https://github.com/pzzzl/p55/blob/master/documentation/CHANGELOG.md) for more detailed information.
 
 ## Installation 
 
