@@ -20,7 +20,7 @@ def run(path):
         folders = folder_structure[1]
         files = folder_structure[2]
 
-        logger.info("\nCurrent directory: " + str(current_directory))
+        logger.info("Current directory: " + str(current_directory))
         logger.info("Folders: " + str(folders))
         logger.info("Files: " + str(files))
 
@@ -43,11 +43,9 @@ def run(path):
                     DUPLICATED_FILES += 1
                     pass
 
-    logger.info("\n")
     for duplicate in duplicates:
         logger.info('DUPLICATE: "' + duplicate + '"')
 
-    logger.info("\nTHE SCRIPT FOUND " + str(DUPLICATED_FILES) + " DUPLICATED FILES!")
+    logger.info("THE SCRIPT FOUND " + str(DUPLICATED_FILES) + " DUPLICATED FILES!")
     logger.info("EXTRACTED FILES: " + str(EXTRACTED_FILES))
     logger.info("FINISHED SUCCESFULLY!")
-    input("\nPress ENTER to continue...")

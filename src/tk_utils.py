@@ -1,8 +1,10 @@
 from tkinter import Frame, filedialog
+from src.log import logger
 import tkinter as tk
 
 class Application(tk.Frame):
     def __init__(self, master, extract_function, organizer_function):
+        logger.info("Starting application...")
         super().__init__(master)
         self.master = master
         self.master.configure(background="orange")
@@ -13,6 +15,7 @@ class Application(tk.Frame):
         self.pack()
         self.initial_setup()
         self.center()
+        logger.info("Application started succesfully")
 
     def initial_setup(self):
         self.extract_button = tk.Button(self.frame)
@@ -23,10 +26,9 @@ class Application(tk.Frame):
 
         self.organize_button = tk.Button(self.frame)
         self.organize_button.config(width=10, height=2)
-        self.organize_button.place(anchor=tk.CENTER)
+        # self.organize_button.place(anchor=tk.CENTER)
         self.organize_button["text"] = "Organize"
         self.organize_button["command"] = self.organizer
-        # self.organize_button["state"] = "disabled"
         self.organize_button.pack()
     
     def dispatch(self):
@@ -47,21 +49,26 @@ class Application(tk.Frame):
         self.master.deiconify()
 
     def exit(self):
+        logger.info("Destroying master...")
         self.master.destroy()
 
     def extract(self):
         self.master.withdraw()
         try:
+            logger.info("Calling the extract module")
             self.extract_function()
         except:
+            logger.info("Module 'extract' closed unexpectedly")
             pass
         self.master.deiconify()
 
     def organizer(self):
         self.master.withdraw()
         try:
+            logger.info("Calling the organizer module")
             self.organizer_function()
         except:
+            logger.info("Module 'organizer' closed unexpectedly")
             pass
         self.master.deiconify()
 
@@ -71,6 +78,7 @@ class Utils:
         self.master.withdraw()
 
     def start(self, msg):
+        logger.info(msg)
         self.msg = msg
         self.start_info = tk.messagebox.askokcancel(title="Choose folder", message=self.msg)
         if not self.start_info:
@@ -78,6 +86,7 @@ class Utils:
         self.master.destroy()
     
     def get_path(self):
+        logger.info("Asking directory")
         self.path = filedialog.askdirectory()
         self.master.destroy()
         if(self.path != ""):
@@ -86,8 +95,10 @@ class Utils:
             exit()
 
     def are_you_sure(self, msg):
+        logger.info(msg)
         self.msg = msg
         self.question = tk.messagebox.askyesno(title="Confirm", message=self.msg)
+        logger.info(self.question)
         if self.question:
             self.master.destroy()
         else:

@@ -1,12 +1,14 @@
 import logging
 from datetime import datetime
 
-now = datetime.now()
-current_time = now.strftime("%H-%M-%S")
-output_log_name = "output-" + current_time + ".log"
+class Log:
+    def __init__(self):
+        self.now = datetime.now().strftime("%H-%M-%S")
+        self.name = "output-" + self.now + ".log"
+    def create(self):
+        logging.basicConfig(filename=self.name, format='%(asctime)s %(message)s', filemode='w')
+        self.logger = logging.getLogger()
+        self.logger.setLevel(logging.INFO)
+        return self.logger
 
-logging.basicConfig(filename=output_log_name, format='%(asctime)s %(message)s', filemode='w')
-
-logger = logging.getLogger()
-
-logger.setLevel(logging.INFO)
+logger = Log().create()
