@@ -22,3 +22,4 @@ Developers:
 - TDD
 - Sample structure creation (also for testing)
 - Organizer module refactoring
+- Turn everything into classes
