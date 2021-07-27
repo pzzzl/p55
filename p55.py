@@ -3,7 +3,6 @@ from config.config import *
 from src.tk_utils import Application
 from src.extract.main import extract
 from src.organizer.main import organizer
-from src.log import logger
 
 if(__name__ == '__main__'):
     root = tk.Tk()
