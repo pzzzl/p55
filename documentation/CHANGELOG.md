@@ -23,3 +23,4 @@ Developers:
 - Sample structure creation (also for testing)
 - Organizer module refactoring
 - Turn everything into classes
+- Translate remaining HTML into Markdown (more of a documentation thing)
