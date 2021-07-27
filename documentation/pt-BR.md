@@ -8,11 +8,12 @@
 
 ## Sumário
 
+- [Sumário](#sumário)
 - [Funcionalidades](#funcionalidades)
 - [Instalação](#instalação)
 - [Como funciona?](#como-funciona)
-    1. [Extração](#extração)
-    2. [Organização](#organização)
+  - [Extração](#extração)
+  - [Organização](#organização)
 - [Aviso](#aviso)
 
 ## Funcionalidades
