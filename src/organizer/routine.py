@@ -1,5 +1,6 @@
 import os
 from shutil import move
+from src.log import logger
 
 def run(path):
     dir = path
@@ -18,7 +19,7 @@ def run(path):
         try:
             os.replace(file, destination)
         except PermissionError:
-            print('\nFailed to move file "%s": being used by another process.\n' % f)
+            logger.info('\nFailed to move file "%s": being used by another process.\n' % f)
 
     # FOCUS ON NEW FOLDER
     os.chdir(folder)
@@ -48,5 +49,5 @@ def run(path):
         try:
             move(folder + '/' + f, destination)
         except:
-            print('"%s" already exists.' % f)
-        print(file_extension)
+            logger.info('"%s" already exists.' % f)
+        logger.info(file_extension)

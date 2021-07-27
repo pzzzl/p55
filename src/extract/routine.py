@@ -1,4 +1,5 @@
 import os
+from src.log import logger
 
 def run(path):
     extracted = path + '/extracted'
@@ -6,7 +7,7 @@ def run(path):
     directories = list(os.walk(path))
 
     directories_len = len(directories)
-    print('Analyzing %s directories...' % directories_len)
+    logger.info('Analyzing %s directories...' % directories_len)
 
     # STATISTICS
     EXTRACTED_FILES = 0
@@ -19,9 +20,9 @@ def run(path):
         folders = folder_structure[1]
         files = folder_structure[2]
 
-        print("\nCurrent directory: " + str(current_directory))
-        print("Folders: " + str(folders))
-        print("Files: " + str(files))
+        logger.info("\nCurrent directory: " + str(current_directory))
+        logger.info("Folders: " + str(folders))
+        logger.info("Files: " + str(files))
 
         if folder_structure == extracted:
             pass
@@ -30,23 +31,23 @@ def run(path):
                 file_path = current_directory + '/' + file_name
                 destination = extracted + '/' + file_name
                 try:
-                    print('Moving file "' + file_name + '"')
+                    logger.info('Moving file "' + file_name + '"')
                     # os.replace(file_path, destination)
                     os.rename(file_path, destination)
                     EXTRACTED_FILES += 1
                 except PermissionError:
-                    print('Failed to move file "' + file_name + '": being used by another process')
+                    logger.info('Failed to move file "' + file_name + '": being used by another process')
                 except FileExistsError:
-                    print('File "' + file_name + '" already exists')
+                    logger.info('File "' + file_name + '" already exists')
                     duplicates.append(file_path)
                     DUPLICATED_FILES += 1
                     pass
 
-    print("\n")
+    logger.info("\n")
     for duplicate in duplicates:
-        print('DUPLICATE: "' + duplicate + '"')
+        logger.info('DUPLICATE: "' + duplicate + '"')
 
-    print("\nTHE SCRIPT FOUND " + str(DUPLICATED_FILES) + " DUPLICATED FILES!")
-    print("EXTRACTED FILES: " + str(EXTRACTED_FILES))
-    print("FINISHED SUCCESFULLY!")
+    logger.info("\nTHE SCRIPT FOUND " + str(DUPLICATED_FILES) + " DUPLICATED FILES!")
+    logger.info("EXTRACTED FILES: " + str(EXTRACTED_FILES))
+    logger.info("FINISHED SUCCESFULLY!")
     input("\nPress ENTER to continue...")

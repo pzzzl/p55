@@ -1,4 +1,4 @@
 from distutils.core import setup
 import py2exe
 
-setup(console=['p55.py'])
+setup(windows=['p55.py'])

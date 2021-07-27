@@ -1,3 +1,4 @@
+from logging import log
 import tkinter as tk
 from config.config import *
 from src.tk_utils import Application
