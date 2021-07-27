@@ -1,7 +1,7 @@
 <h1 align="center">P55 ⛏</h1>
 
 <p align="center">
-    <img src="https://img.shields.io/badge/version-2.1.0-brightgreen"> <img src="https://img.shields.io/badge/feature-File%20organization-orange"> <img src="https://img.shields.io/badge/tools-utilities-blue">
+    <img src="https://img.shields.io/badge/version-2.1.1-brightgreen"> <img src="https://img.shields.io/badge/feature-File%20organization-orange"> <img src="https://img.shields.io/badge/tools-utilities-blue">
 </p>
 
 <p align="center"> <a href="https://github.com/pzzzl/p55/blob/master/documentation/pt-BR.md">Documentação em Português (BR)</a> </p>
