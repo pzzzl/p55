@@ -1,6 +1,6 @@
 # Versions
 
-## 2.1.1 (under development)
+## 2.1.1
 
 - Licensed under MIT license
 
